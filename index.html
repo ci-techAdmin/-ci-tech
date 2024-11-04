@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ci-Tech </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="icons-left">
+            <div class="dropdown">
+                <i class="fas fa-cog"></i>
+                <div class="dropdown-content">
+                    <a href="#">Shutdown</a>
+                    <a href="#">Reboot</a>
+                    <a href="#">Clone</a>
+                    <a href="#">Update</a>
+                    <a href="#">Upgrade</a>
+                </div>
+            </div>
+            <i class="fas fa-wifi"></i>
+            <i class="fas fa-exchange-alt"></i>
+            <i class="fas fa-battery-full"></i>
+        </div>
+		<div class="center-text">
+            <span>CI-TECH (FRUITFLY PEST PREDICTION)</span>
+        </div>
+        <div class="logo-right">
+            <img src="logo.png" alt="Logo">
+            <img src="logo-2.png" alt="Logo">
+			 <img src="logo-3.png" alt="Logo">
+        </div>
+  
+    </header>
+
+    <main>
+        <div class="data-box">
+            <i class="fas fa-thermometer-half"></i>
+            <span>Temperature</span>
+        </div>
+        <div class="data-box">
+            <i class="fas fa-tint"></i>
+            <span>Humidity</span>
+        </div>
+        <div class="data-box">
+            <i class="fas fa-cloud-sun"></i>
+            <span>Weather</span>
+        </div>
+        <div class="data-box">
+            <i class="fas fa-info-circle"></i>
+            <span>Status</span>
+        </div>
+        <div class="data-box">
+         <i class="fa-solid fa-mosquito"></i>
+            <span>Fruitfly</span>
+        </div>
+    </main>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var dropdownIcon = document.querySelector('.icons-left i');  // Assuming the first icon is the settings icon
+        var dropdownContent = document.querySelector('.dropdown-content');
+
+        dropdownIcon.addEventListener('click', function() {
+            dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Optional: Close dropdown when clicking outside of it
+        window.addEventListener('click', function(e) {
+            if (!dropdownIcon.contains(e.target) && !dropdownContent.contains(e.target)) {
+                dropdownContent.style.display = 'none';
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
